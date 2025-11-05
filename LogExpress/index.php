@@ -1,10 +1,13 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>LogExpress</title>
+
+	<!--adcionar estilo apartir de um arquivo css-->
+<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 
@@ -240,10 +243,13 @@
 	</main>
 
 	<!------------------rodape--------------------->
-
 	<footer id="rodape">
-        <p> Criado por Erik Leandro, Luiz Davi, Marcelly fonseca e Raimundo Netto &copy;2025</p>
+    <p> Criado por Erik Leandro, Luiz Davi, Marcelly fonseca e Raimundo Netto &copy;2025</p>
   </footer>
+<!--fim do site-->
 
+<!-- Importando o JavaScript -->
+
+<!-- fim Importação JavaScript -->
 </body>
 </html>
