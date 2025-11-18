@@ -1,0 +1,235 @@
+:root {
+  --accent: #EB4D41; /* destaque */
+  --white:  #FFFFFF; 
+  --muted:  #758295; /* textos secundários */
+  --panel:  #596677; /* painéis / bordas */
+  --bg:     #333945; /* fundo principal */
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(180deg, rgba(51,57,69,1) 0%, rgba(40,45,53,1) 100%);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+/* Estrutura */
+.container {
+  width: 100%;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 36px;
+  align-items: center;
+}
+
+/* Painel esquerdo */
+.showcase {
+  padding: 36px;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(86,95,106,0.12), rgba(86,95,106,0.06));
+  border: 1px solid rgba(89,102,119,0.12);
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* local do icone da logo */
+.logo .mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--accent);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: var(--white);
+  box-shadow: 0 8px 24px rgba(235,77,65,0.18);
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 6px 0;
+}
+
+p.lead {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.features {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--white);
+}
+
+.feature .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 6px;
+}
+
+.feature span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Card de login */
+.card {
+  background: linear-gradient(180deg, rgba(51,57,69,0.9), rgba(45,50,58,0.85));
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(17,20,25,0.45);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.card h2 {
+  margin: 0 0 4px 0;
+}
+
+.card p.sub {
+  margin: 0 0 18px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(89,102,119,0.12);
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: var(--white);
+  outline: none;
+  font-size: 15px;
+  transition: box-shadow .18s, border-color .18s, transform .06s;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(235,77,65,0.12);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember {
+  font-size: 13px;
+  color: var(--muted);
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Botões */
+.btn {
+  appearance: none;
+  border: 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  transition: transform .06s ease, box-shadow .12s;
+  background: linear-gradient(90deg, var(--accent), #ff725f);
+  color: var(--white);
+  box-shadow: 0 8px 24px rgba(235,77,65,0.18);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.alt-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.ghost {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.muted-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+footer.small {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 880px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 10px;
+  }
+  .showcase { order: 2; }
+  .card { order: 1; }
+}
+
+/* Formas de fundo */
+.bg-shape {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.06;
+}
