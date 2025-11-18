@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogExpress - loja de eletrônicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+
+    <div class="header-container">
+      <div class="left"><img src="./img/Log.png"></img></div>
+      <div class="logo">Log<span>Express</span></div>
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Buscar produtos..." />
+        
+      </div>
+      <div class="cart" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </div>
+    
+    
+  </header>
+
+  <!-- Produtos -->
+  <main>
+    <div id="product-list" class="product-grid"></div>
+  </main>
+
+  <!-- Carrinho -->
+  <div id="cart-modal" class="hidden">
+    <div class="cart-content">
+      <h2>🛍️ Seu Carrinho</h2>
+      <ul id="cart-items"></ul>
+      <p id="total">Total: R$ 0,00</p>
+      <div class="cart-buttons">
+        <button class="checkout-btn" onclick="checkout()">Finalizar Compra</button>
+        <button class="close-btn" onclick="toggleCart()">Fechar</button>
+      </div>
+    </div>
+  </div>
+<!--Copyright-->
+  <footer>
+    <p>© 2025 LogExpress </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
