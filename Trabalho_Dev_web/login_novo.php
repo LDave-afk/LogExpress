@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tela de Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="showcase" aria-hidden="true">
+      <div class="logo">
+        <img src="imagens/logo.png">
+        <div class="mark">
+        <div>
+          <div style="font-weight:700;">LogExpress</div>
+          <div style="color:var(--muted);font-size:13px">Bem-vindo ao melhor site de eletrônicos</div>
+      </div><h1>Acesse sua conta</h1>
+  <p class="lead">Rápido, seguro e bonito — use seu login para entrar e continuar de onde parou.</p>
+
+  <div class="features">
+    <div class="feature"><div class="dot"></div><span>Design limpo e legível</span></div>
+    <div class="feature"><div class="dot"></div><span>Autenticação segura </span></div>
+    <div class="feature"><div class="dot"></div><span>Responsivo para celular e desktop</span></div>
+  </div>
+</div>
+
+<div class="card" role="region" aria-label="Login">
+  <h2>Entrar</h2>
+  <p class="sub">Use seu e‑mail e senha para acessar sua conta.</p>
+
+  <form action="auth.php" method="POST">
+    <label>
+      Email
+      <input class="input" type="email" name="email" id="email" placeholder="Digite seu email" required />
+    </label>
+
+    <label>
+      Senha
+      <input class="input" type="password" name="senha" id="password" placeholder="••••••••" minlength="6" required />
+    </label>
+
+    <div class="row">
+      <label class="remember"><input type="checkbox"/> Manter conectado</label>
+      <a class="muted-link" href="recuperar_senha.php">Esqueci a senha</a>
+    </div>
+
+    <button class="btn" type="submit">Entrar</button>
+
+    <div class="alt-actions">
+      <button type="button" class="ghost" onclick >Entrar com Google</button>
+      <button type="button" class="ghost">Entrar com GitHub</button>
+    </div>
+
+    <footer class="small">Ainda não tem conta? <a class="muted-link" href="cadastrar.php">Criar conta</a></footer>
+  </form>
+</div>
+
+  </div>  <svg class="bg-shape" viewBox="0 0 800 600" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="g1" x1="0" x2="1">
+        <stop offset="0" stop-color="#EB4D41" stop-opacity="0.6" />
+        <stop offset="1" stop-color="#596677" stop-opacity="0.2" />
+      </linearGradient>
+    </defs>
+    <circle cx="720" cy="80" r="220" fill="url(#g1)" />
+    <ellipse cx="120" cy="520" rx="260" ry="140" fill="#333945" />
+  </svg>
+  
+</body>
+</html>
